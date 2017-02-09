@@ -22,6 +22,10 @@ sum-up-numbers-general([A|L], N) :- /* return the function recursively to add th
 
 
 /* 3 */
+min-above-min(L1, L2, N):-
+	listlength(L2, Length),
+	Length <= 1,
+	min_in_list(L1, N).
 
 
 
