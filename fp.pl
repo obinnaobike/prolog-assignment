@@ -31,4 +31,7 @@ common-unique-elements([A|L1], L2, [A|B]) :-
 member(L2,A),!,common-unique-elements(L1,L2,B).
 common-unique-elements([_|L1], L2, B):-
     common-unique-elements(L1,L2,B).
+member([A|_],A).
+member([_|C], A):- member(C,A).
+
 
