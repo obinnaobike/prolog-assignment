@@ -15,6 +15,13 @@ sum-up-numbers-general([],0). /* base case empty list = 0 */
 sum-up-numbers-general([B|L], N) :- sum-up-numbers-general(B, N1), 
 sum-up-numbers-general(L, N3),
 N is N1 + N3. /* recursively call the function */
+sum-up-numbers-general([B|L], N) :- 
+\+(number(N1)), /* checks to see if each item in the list is a number */
+sum-up-numbers-general(L, N),
+sum-up-numbers-general([B|L, N) :- 
+\+(number(N3)),
+sum-up-numbers-general(L, N).
+
 
 
 
