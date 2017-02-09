@@ -27,4 +27,5 @@ sum-up-numbers-general([A|L], N) :- /* return the function recursively to add th
 
 / * 4 */
 common-unique-elements([],[],[]).
-common-unique-elements([A|L1], L2, [A|L3]):-
+common-unique-elements([A|L1], L2, [A|B]) :-
+member(L2,A),!,common-unique-elements(L1,L2,B).
