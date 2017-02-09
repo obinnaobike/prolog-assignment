@@ -11,13 +11,11 @@ sum-up-numbers-simple([A|L], N) :- /* return the function recursively to add the
 
 
 /* 2 */
-sum-up-numbers-general([], 0). /* base case if the list is empty return 0*/
-sum-up-numbers-general([A|L], N) :- /* return the function recursively to add the tail end of the list */
-   number(N),
-   number(A),
-   number(L),
-   sum-up-numbers-general(L, B),
-   the_sum is L + B.
+sum-up-numbers-general([],0). /* base case empty list = 0 */
+sum-up-numbers-general([B|L], N) :- sum-up-numbers-general(B, N1), 
+sum-up-numbers-general(L, N3),
+N is N1 + N3. /* recursively call the function */
+
 
 
 /* 3 */
